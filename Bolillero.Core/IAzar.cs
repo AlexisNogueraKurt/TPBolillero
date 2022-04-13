@@ -1,12 +1,14 @@
-using system;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Bolillero.Core
 {
-    public class IAzar
+    public interface  IAzar
     {
-        public byte SacarBolilla()
-        {
-            
+        byte SacarBolilla(List<byte> bol);
+        
+        
         }
     }
-}
+
