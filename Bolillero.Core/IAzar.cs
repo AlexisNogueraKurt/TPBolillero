@@ -1,3 +1,5 @@
+using system;
+
 namespace Bolillero.Core
 {
     public class IAzar

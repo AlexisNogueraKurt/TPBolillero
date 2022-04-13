@@ -1,11 +1,12 @@
-using system;
-using System.
+using System;
+
+
 
 
 namespace Bolillero.Core
 {
     public class Bolillero
     {
-        public List 
+        public List<byte>
     }
 }
