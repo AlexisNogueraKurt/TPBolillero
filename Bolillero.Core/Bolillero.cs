@@ -8,25 +8,32 @@ namespace Bolillero.Core
 {
     public class Bolillero 
     {
-        private List<byte> adentro {get; set;}
-        private List<byte> afuera {get; set;}
+        private List<byte> Adentro {get; set;}
+        private List<byte> Afuera {get; set;}
         private IAzar azar {get; set;}
-        public Bolillero(){
+        public Bolillero(IAzar Azar){
 
         
-        adentro =  new List<byte>();
-        afuera =  new List<byte>();
+        Adentro =  new List<byte>();
+        Afuera =  new List<byte>();
+        Azar = azar;
         
-
         }
         public Bolillero( byte numero){
 
+
+
         }
         private byte CrearBolilla(byte bolillas){
+            
+
 
         }
         public void ReIngresar()
         {
+            Afuera.AddRange(Adentro);
+            Afuera.Clear();
+
 
         }
 
