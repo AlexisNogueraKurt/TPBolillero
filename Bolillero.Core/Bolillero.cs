@@ -20,6 +20,7 @@ namespace Bolillero.Core
         
         }
         public Bolillero( byte numero){
+            numero.
 
 
 
