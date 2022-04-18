@@ -26,7 +26,7 @@ namespace Bolillero.Core
         }
         private byte CrearBolilla(byte bolillas){
             
-
+        return bolillas;
 
         }
         public void ReIngresar()
