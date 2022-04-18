@@ -10,17 +10,17 @@ namespace Bolillero.Core
     {
         private List<byte> Adentro {get; set;}
         private List<byte> Afuera {get; set;}
-        private IAzar azar {get; set;}
-        public Bolillero(IAzar Azar){
+        private IAzar Azar {get; set;}
+        public Bolillero(IAzar azar){
 
         
         Adentro =  new List<byte>();
         Afuera =  new List<byte>();
-        Azar = azar;
+        azar = Azar;
         
         }
-        public Bolillero( IAzar iazar,byte numero) 
-        => CrearBolilla(numero);
+        public Bolillero( IAzar Azar,byte numeros) 
+        => CrearBolilla(numeros);
         
         private byte CrearBolilla(byte bolillas){
             
@@ -31,16 +31,16 @@ namespace Bolillero.Core
         {
             Afuera.AddRange(Adentro);
             Afuera.Clear();
-
-
         }
 
         public byte SacarBolilla(){
+            var bol = Azar.SacarBolilla(Adentro);
+            Adentro.Add(bol);
+            Afuera.Remove(bol);
+            return bol;
 
         }
-        public bool Jugar(List<byte> j ){
-
-        }
+        public bool Jugar(List<byte> j ) => j.Count();
         public long JugarN(){
 
         }

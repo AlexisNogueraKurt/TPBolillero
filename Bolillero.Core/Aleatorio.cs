@@ -18,15 +18,5 @@ namespace Bolillero.Core
         
     }
 }
-        
 
-
-
-
-            
-    
-
-
-        
-    
 
