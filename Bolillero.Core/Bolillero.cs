@@ -19,12 +19,9 @@ namespace Bolillero.Core
         Azar = azar;
         
         }
-        public Bolillero( byte numero){
-            numero.
-
-
-
-        }
+        public Bolillero( IAzar iazar,byte numero) 
+        => CrearBolilla(numero);
+        
         private byte CrearBolilla(byte bolillas){
             
         return bolillas;

@@ -7,8 +7,6 @@ namespace Bolillero.Core
     public interface  IAzar
     {
         byte SacarBolilla(List<byte> bol);
-        
-        
         }
     }
 
