@@ -8,6 +8,7 @@ namespace Bolillero.Core
         private List<byte> Adentro {get; set;}
         private List<byte> Afuera {get; set;}
         private IAzar Azar {get; set;}
+
         public Bolillero(IAzar azar)
         {
         Adentro =  new List<byte>();
@@ -16,6 +17,7 @@ namespace Bolillero.Core
         }
         public Bolillero( IAzar Azar,byte numeros) 
             => CrearBolillas(numeros);
+            
         private void CrearBolillas(byte numeros)
         {
             for (byte i = 0; i < numeros; i ++)

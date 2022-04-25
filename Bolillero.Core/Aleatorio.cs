@@ -9,7 +9,6 @@ namespace Bolillero.Core
     {
         private Random r = new Random();
         
-
         public byte SacarBolilla(List<byte> bol)
         {
             var Cbyte = Convert.ToByte( r.Next(0, bol.Count));
