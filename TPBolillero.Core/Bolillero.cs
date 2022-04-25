@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 
-namespace Bolillero.Core
+namespace TPBolillero.Core
 {
     public class Bolillero 
     {
-        private List<byte> Adentro {get; set;}
-        private List<byte> Afuera {get; set;}
-        private IAzar Azar {get; set;}
+        public List<byte> Adentro {get; set;}
+        public List<byte> Afuera {get; set;}
+        public IAzar Azar {get; set;}
+        public Bolillero(){}
 
         public Bolillero(IAzar azar)
         {

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Bolillero.Core
+namespace TPBolillero.Core
 {
     public interface  IAzar
     {

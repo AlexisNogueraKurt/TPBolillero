@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Bolillero.Core/bin/Debug/net5.0/Bolillero.Core.dll",
+            "program": "${workspaceFolder}/TPBolillero.Core/bin/Debug/net5.0/TPBolillero.Core.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Bolillero.Core",
+            "cwd": "${workspaceFolder}/TPBolillero.Core",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false

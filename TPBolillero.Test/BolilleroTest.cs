@@ -1,54 +1,54 @@
 using System;
 using Xunit;
-using Bolillero.Core;
+using TPBolillero.Core;
 using System.Collections.Generic;
 using System.Linq;
 
 
-namespace Bolillero.Test
+namespace TPBolillero.Test
 { 
     public class BolilleroTest
     {
-        public Bolillero bolillero {get; set;}
+        public Bolillero bol {get ; set;}
         public BolilleroTest()
         {
-            bolillero = new Bolillero(10);
-            bolillero.Azar = new Primero();
+            bol = new Bolillero(10);
+            bol  = new Primero();
         }
         [Fact]
         public void SacarBolilla()
         {
-            Assert.Equal(0, bolillero.SacarBolilla());
-            Assert.Equal(9,bolillero.Adentro.Count);
-            Assert.Equal(1,bolillero.Afuera.Count);
+            Assert.Equal(0,bol.SacarBolilla());
+            Assert.Equal(9,bol.Adentro.Count);
+            Assert.Equal(1,bol.Afuera.Count);
         }
 
         [Fact]
         public void ReIngresar()
         {
-            bolillero.SacarBolilla();
-            bolillero.Reingresar();
-            Assert.Equal(10,bolillero.Adentro.Count);
-            Assert.Equal(0,bolillero.Afuera.Count);
+            bol.SacarBolilla();
+            bol.ReIngresar();
+            Assert.Equal(10,bol.Adentro.Count);
+            Assert.Equal(0,bol.Afuera.Count);
         }
 
         [Fact]
         public void JugarGana()
         {
             List<byte> j1= new List<byte>{0,1,2,3};
-            Assert.True(bolillero.Jugar(j1));
+            Assert.True(bol.Jugar(j1));
         }
         [Fact]
         public void JugarPierde()
         {
             List<byte> j1= new List<byte>{4,2,1};
-            Assert.False(bolillero.Jugar(j1));
+            Assert.False(bol.Jugar(j1));
         }
         [Fact]
         public void GanarN()
         {
             List<byte> j1= new List<byte>{0,1};
-            Assert.Equal(1,bolillero.JugarN(j1,1));
+            Assert.Equal(1,bol.JugarN(j1,1));
         }
     }
 }

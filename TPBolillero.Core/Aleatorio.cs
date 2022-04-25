@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace Bolillero.Core
+namespace TPBolillero.Core
 {
     class Aleatorio 
     {
@@ -11,6 +11,7 @@ namespace Bolillero.Core
         
         public byte SacarBolilla(List<byte> bol)
         {
+            int Cantidad = bol.Count;
             var Cbyte = Convert.ToByte( r.Next(0, bol.Count));
             return bol[Cbyte];
         }
