@@ -11,40 +11,41 @@ namespace TPBolillero.Core
         
         public Bolillero(){}
 
-        public Bolillero(IAzar azar)
-        {
-        Adentro =  new List<byte>();
-        Afuera =  new List<byte>();
-        azar = Azar; 
-        }
-        public Bolillero( IAzar Azar,byte numeros) 
-            => CrearBolillas(numeros);
+        public Bolillero(byte bol) 
+            => CrearBolillas(bol);
             
-        private void CrearBolillas(byte numeros)
+        private void CrearBolillas(byte numero)
         {
-            for (byte i = 0; i < numeros; i ++)
-            Adentro.Add(i);
+            Adentro = new List<byte>();
+            Afuera = new List<byte>();
+            for (byte bol = 0; bol < numero; bol ++)
+            {
+                Adentro.Add(bol);
+            } 
         }
         public void ReIngresar()
         {
-            Afuera.AddRange(Adentro);
+            Adentro.AddRange(Afuera);
             Afuera.Clear();
         }
         public byte SacarBolilla()
         {
-            var bol = Azar.SacarBolilla(Adentro);
-            Adentro.Add(bol);
-            Afuera.Remove(bol);
+            byte bol = Azar.SacarBolilla(Adentro);
+            Adentro.Remove(bol);
+            Afuera.Add(bol);
             return bol;
         }
         public bool Jugar( List<byte> bol )
             => bol.TrueForAll(b => b == SacarBolilla());
-        public long JugarN(List<byte> jugada, int cantidad)
+
+        public long JugarN(List<byte> jugada, long cantidad)
         {
             long Contador = 0;
 
             for (int i = 0; i < cantidad ; i ++)
             {
+                ReIngresar();
+
                 if(Jugar(jugada))
                 {
                     Contador ++;
