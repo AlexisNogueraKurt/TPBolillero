@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace TPBolillero.Core
 {
-    public interface  IAzar
+    public interface  IAzar 
     {
         byte SacarBolilla(List<byte> bol);
         }

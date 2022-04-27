@@ -13,7 +13,7 @@ namespace TPBolillero.Test
         public BolilleroTest()
         {
             bol = new Bolillero(10);
-            bol  = new Primero();
+            bol.Azar = new Primero();
         }
         [Fact]
         public void SacarBolilla()

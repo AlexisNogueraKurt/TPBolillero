@@ -8,6 +8,7 @@ namespace TPBolillero.Core
         public List<byte> Adentro {get; set;}
         public List<byte> Afuera {get; set;}
         public IAzar Azar {get; set;}
+        
         public Bolillero(){}
 
         public Bolillero(IAzar azar)
