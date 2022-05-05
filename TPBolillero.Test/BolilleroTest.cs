@@ -35,20 +35,20 @@ namespace TPBolillero.Test
         [Fact]
         public void JugarGana()
         {
-            List<byte> j1= new List<byte>{0,1,2,3};
-            Assert.True(bol.Jugar(j1));
+            List<byte> juego = new List<byte>{0,1,2,3};
+            Assert.True(bol.Jugar(juego));
         }
         [Fact]
         public void JugarPierde()
         {
-            List<byte> j1= new List<byte>{4,2,1};
-            Assert.False(bol.Jugar(j1));
+            List<byte> juego = new List<byte>{4,2,1};
+            Assert.False(bol.Jugar(juego));
         }
         [Fact]
         public void GanarN()
         {
-            List<byte> j1= new List<byte>{0,1};
-            Assert.Equal(1,bol.JugarN(j1,1));
+            List<byte> juego = new List<byte>{0,1};
+            Assert.Equal(1,bol.JugarN(juego,1));
         }
     }
 }
