@@ -2,9 +2,10 @@ namespace TPBolillero.Core
 {
     public class Simulacion
     {
-        public int SimularSinHilos()
+        public int SimularSinHilos(Bolillero bol,  )
         {
-
+            
+        
         }
 
         public int SimularConHilos()
