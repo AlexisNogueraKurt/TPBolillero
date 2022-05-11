@@ -10,6 +10,11 @@ namespace TPBolillero.Core
         public IAzar Azar {get; set;}
         
         public Bolillero(){}
+        private Bolillero(Bolillero original)
+        {
+            Adentro = new List<byte>(original.Adentro);
+            Afuera = new List<byte>(original.Afuera);
+        }
 
         public Bolillero(byte bol) 
             => CrearBolillas(bol);
@@ -53,6 +58,11 @@ namespace TPBolillero.Core
             }
             return Contador;
         }
-    
+
+        public object Clone()
+        {
+            //this hace referencia al objeto que estás usando en le momento en tu código,
+            return new Bolillero(this);
+        }
     }
 }
