@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TPBolillero.Core
 {
-    public class Bolillero 
+    public class Bolillero : ICloneable
     {
         public List<byte> Adentro {get; set;}
         public List<byte> Afuera {get; set;}
