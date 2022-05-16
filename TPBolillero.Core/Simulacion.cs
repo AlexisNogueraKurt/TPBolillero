@@ -7,7 +7,7 @@ namespace TPBolillero.Core
 {
     public class Simulacion
     {
-        //Atributo Bolillero,List jugadas, lomg cantidad
+        //Atributo Bolillero,List jugadas, long cantidad
         public long SimularSinHilos(Bolillero copia, List<byte> jugadas, long cantidad )
         {
             return copia.JugarN(jugadas, cantidad);
@@ -19,7 +19,8 @@ namespace TPBolillero.Core
             
             for(long i = 0; i < cantidad; i ++ )
             {
-                copia.Clone();
+                var clon = (Bolillero)copia.Clone();
+                tareas[i] = Task.Run(() => SimularSinHilos(c));
                 
 
             }
