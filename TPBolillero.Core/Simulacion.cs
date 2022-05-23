@@ -21,7 +21,7 @@ namespace TPBolillero.Core
             {
                 var clon = (Bolillero)copia.Clone();
                 tareas[i] = Task.Run(() => SimularSinHilos(clon,jugadas,cantidad));
-                
+                var 
                 Task<long>.WaitAll(tareas);
             }
         
