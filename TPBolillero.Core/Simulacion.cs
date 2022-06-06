@@ -26,9 +26,8 @@ namespace TPBolillero.Core
             Task<long>.WaitAll(tareas);
             return tareas.Sum(x => x.Result);
         }
-        public async Task<long> SimularConHilosAsync()
+        public async Task<long> SimularConHilosAsync(Bolillero copia, List<byte> jugadas, long cantidad, long hilos)
         {
-            
-        }
+            var SimulacionAsync = await copia.SimularConHilos(hilos);
     }
 }
