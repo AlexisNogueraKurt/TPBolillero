@@ -25,8 +25,10 @@ namespace TPBolillero.Core
             var Division = hilos/cantidad;
             Task<long>.WaitAll(tareas);
             return tareas.Sum(x => x.Result);
-
-        
+        }
+        public async Task<long> SimularConHilosAsync()
+        {
+            
         }
     }
 }
