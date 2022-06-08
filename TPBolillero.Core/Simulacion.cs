@@ -28,6 +28,18 @@ namespace TPBolillero.Core
         }
         public async Task<long> SimularConHilosAsync(Bolillero copia, List<byte> jugadas, long cantidad, long hilos)
         {
-            var SimulacionAsync = await copia.SimularConHilos(hilos);
+            Task<long>[] tareas = new Task<long>[hilos];
+            
+            for(long i = 0; i < cantidad; i ++ )
+            {
+                var clon = (Bolillero)copia.Clone();
+                tareas[i] = Task.Run(() => SimularSinHilos(clon,jugadas,hilos));
+            }
+            var Division = hilos/cantidad;
+            await Task<long>.WhenAll(SimularConHilos(tareas),
+                                     SimularSinHilos());
+                                    );
+            return tareas.Sum(x => x.Result);
+            
     }
 }
