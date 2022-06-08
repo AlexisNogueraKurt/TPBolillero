@@ -36,9 +36,7 @@ namespace TPBolillero.Core
                 tareas[i] = Task.Run(() => SimularSinHilos(clon,jugadas,hilos));
             }
             var Division = hilos/cantidad;
-            await Task<long>.WhenAll(SimularConHilos(tareas),
-                                     SimularSinHilos());
-                                    );
+            await Task<long>.WhenAll(tareas);
             return tareas.Sum(x => x.Result);
             
     }
